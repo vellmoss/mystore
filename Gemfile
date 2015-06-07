@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'mysql2', '~> 0.3.11'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -41,3 +42,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
+
+=begin
+#group :development do
+  gem 'activerecord-mysql2-adapter'
+#end
+=end

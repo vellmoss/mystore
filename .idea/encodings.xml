@@ -3,7 +3,22 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Gemfile" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/README.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/models/mstore.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/layouts/application.html.erb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/mstores/_form.html.erb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/mstores/edit.html.erb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/mstores/index.html.erb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/mstores/index.json.jbuilder" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bin/rails" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/application.rb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/boot.rb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/database.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/environments/development.rb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db/migrate/001_create_database.rb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20150603204700_create_mstores.rb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/log/development.log" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/fixtures/mstores.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/models/mstore_test.rb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/test_helper.rb" charset="UTF-8" />
   </component>
 </project>
