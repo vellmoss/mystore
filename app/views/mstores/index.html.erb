@@ -1,0 +1,27 @@
+<h1>Listing mstores</h1>
+
+<table>
+  <!--thead-->
+    <tr>
+      <th>Position</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  <!--/thead-->
+
+  <!--tbody-->
+    <% @mstores.each do |mstore| %>
+      <tr>
+        <td><%= mstore.position %></td>
+        <td><%= mstore.price %></td>
+        <td><%= link_to 'Show', mstore %></td>
+        <td><%= link_to 'Edit', edit_mstore_path(mstore) %></td>
+        <td><%= link_to 'Destroy', mstore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  <!--/tbody-->
+</table>
+
+<br>
+
+<%= link_to 'New Mstore', new_mstore_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@mstore) do |f| %>
+  <% if @mstore.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mstore.errors.count, "error") %> prohibited this mstore from being saved:</h2>
+
+      <ul>
+      <% @mstore.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :position %><br>
+    <%= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

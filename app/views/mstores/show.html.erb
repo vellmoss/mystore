@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @mstore.position %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @mstore.price %>
+</p>
+
+<%= link_to 'Edit', edit_mstore_path(@mstore) %> |
+<%= link_to 'Back', mstores_path %>
