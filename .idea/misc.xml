@@ -8,7 +8,7 @@
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+    <ConfirmationsSetting value="1" id="Remove" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="ruby-2.1.5-p273" project-jdk-type="RUBY_SDK" />
 </project>

@@ -12,11 +12,13 @@
   <!--tbody-->
     <% @mstores.each do |mstore| %>
       <tr>
+
         <td><%= mstore.position %></td>
         <td><%= mstore.price %></td>
         <td><%= link_to 'Show', mstore %></td>
         <td><%= link_to 'Edit', edit_mstore_path(mstore) %></td>
         <td><%= link_to 'Destroy', mstore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   <!--/tbody-->

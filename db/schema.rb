@@ -21,6 +21,6 @@ ActiveRecord::Schema.define(version: 0) do
     t.datetime "updated_at",                                      null: false
   end
 
-  add_index "mstores", ["id"], name: "index id", unique: true, using: :btree
+#  add_index "mstores", ["id"], name: "index id", unique: true, using: :btree
 
 end

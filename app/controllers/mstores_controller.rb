@@ -57,7 +57,7 @@ class MstoresController < ApplicationController
     @mstore.destroy
     respond_to do |format|
       format.html { redirect_to mstores_url, notice: 'Mstore was successfully destroyed.' }
-      format.json { head :no_content }
+#      format.json { head :no_content }
     end
   end
 
