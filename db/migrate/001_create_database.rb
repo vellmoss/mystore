@@ -9,7 +9,7 @@ class CreateDatabase < ActiveRecord::Migration
       t.timestamp "updated_at",                                      null: false
     end
 
-    add_index "mstores", ["id"], name: "index id", unique: true     #using: :btree
+#    add_index "mstores", ["id"], name: "index id", unique: true     #using: :btree
 
   end
 
@@ -24,6 +24,6 @@ class CreateDatabase < ActiveRecord::Migration
       t.timestamp "updated_at",                                      null: false
     end
 
-    add_index "mstores", ["id"], name: "index id", unique: true     #using: :btree
+#    add_index "mstores", ["id"], name: "index id", unique: true     #using: :btree
   end
 end

@@ -53,13 +53,15 @@ class MstoresController < ApplicationController
 
   # DELETE /mstores/1
   # DELETE /mstores/1.json
+
   def destroy
     @mstore.destroy
     respond_to do |format|
       format.html { redirect_to mstores_url, notice: 'Mstore was successfully destroyed.' }
-#      format.json { head :no_content }
+      format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

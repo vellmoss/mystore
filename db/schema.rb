@@ -13,14 +13,11 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
-  create_table "mstores", id: false, force: true do |t|
-    t.integer  "id",                                              null: false
-    t.text     "position",   limit: 255,                          null: false
-    t.decimal  "price",                  precision: 10, scale: 2, null: false
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+  create_table "mstores", force: true do |t|
+    t.text      "position",   limit: 255,                          null: false
+    t.decimal   "price",                  precision: 10, scale: 2, null: false
+    t.timestamp "created_at",                                      null: false
+    t.datetime  "updated_at",                                      null: false
   end
-
-#  add_index "mstores", ["id"], name: "index id", unique: true, using: :btree
 
 end
