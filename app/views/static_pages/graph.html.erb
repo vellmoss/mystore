@@ -1,0 +1,19 @@
+
+<%javascript_include_tag "graph"%>
+<h1>Просто график</h1>
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<br><br>
+<%= link_to 'обратно', mstores_path %>
+
+<!--при повторном вызове нет отображения графика и потому так криво рефрешу по клику-->
+
+<script>
+    $('#container').click(function() {
+        location.reload(false);             <!--false: reload from cash -->
+    });
+</script>
+
+
+
+
+

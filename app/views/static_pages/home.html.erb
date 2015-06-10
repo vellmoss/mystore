@@ -1,7 +1,10 @@
-<% provide(:title, 'Home') %>
+<!--% provide(:title, 'Home') %--> <!-- отключил для демо full_title -->
+<div class="jumbotron">
 <h1>Набросок my Store</h1>
-<p>
-  Это начальная страничка приклада а-ля Twitter:
-  <a href="http://localhost:3000/users/6/following">Последователи</a>
-
-</p>
+    <p>
+        Это начальная страничка приклада а-ля Twitter:
+        <a href="http://localhost:3000/users/6/following">Последователи</a>
+        <!%= link_to 'обратно', mstores_path %-->
+        <p><a class="btn btn-primary btn-lg" href="/mstores" role="button">идем взад</a></p>
+    </p>
+</div>

@@ -43,8 +43,6 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 
-=begin
-#group :development do
-  gem 'activerecord-mysql2-adapter'
-#end
-=end
+gem 'chartkick', '~> 1.3.1'
+gem 'groupdate', '~> 2.1.1'
+gem 'active_median', '~> 0.1.0'
