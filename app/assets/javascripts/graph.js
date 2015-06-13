@@ -6,6 +6,8 @@
  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
  */
+//  кстати эта библиотека называется highcharts.js, а graph.js я только один тип графиков отрисовываю.
+
 $(function () {
     $('#container').highcharts({
         title: {

@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150610204931) do
 
   create_table "mstores", force: true do |t|
-    t.text      "position",   limit: 255,                          null: false
-    t.decimal   "price",                  precision: 10, scale: 2, null: false
-    t.timestamp "created_at",                                      null: false
-    t.datetime  "updated_at",                                      null: false
+    t.text     "position"
+    t.decimal  "price",      precision: 10, scale: 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "visits", force: true do |t|
+    t.string   "country"
+    t.datetime "visited_at"
+    t.decimal  "load_time",  precision: 10, scale: 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

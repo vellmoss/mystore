@@ -13,11 +13,15 @@
     <file url="file://$PROJECT_DIR$/app/helpers/application_helper.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/models/mstore.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/charts/chartkick.html.erb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/charts/show.html.erb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/layouts/application.html.erb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/mstores/_form.html.erb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/mstores/edit.html.erb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/mstores/index.html.erb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/mstores/index.json.jbuilder" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/views/mstores/new.html.erb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/static_pages/about.html.erb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/static_pages/contact.html.erb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/views/static_pages/graph.html.erb" charset="UTF-8" />
@@ -34,6 +38,8 @@
     <file url="file://$PROJECT_DIR$/config/routes.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/db/migrate/001_create_database.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/db/migrate/20150603204700_create_mstores.rb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db/migrate/20150610204931_create_visits.rb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db/seeds.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/log/development.log" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test/fixtures/mstores.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test/models/mstore_test.rb" charset="UTF-8" />

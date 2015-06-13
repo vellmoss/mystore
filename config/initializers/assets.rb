@@ -9,3 +9,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( glyphicons-halflings.png )
 Rails.application.config.assets.precompile += %w( glyphicons-halflings-white.png )
 Rails.application.config.assets.precompile += %w( graph.js )
+Rails.application.config.assets.precompile += %w( chartkick.js )
