@@ -1,19 +1,27 @@
 
+<script>
+          $arg1   = "<%= raw @arg1 %>"
+          $arg2   = <%= raw @arg2 %>   //['Jan', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Dec']
+          $serMos = <%= raw @serMos %>  //[5.2, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+          $serNY  = <%= raw @serNY %>
+          $serIR  = <%= raw @serIR %>
+          $serKZ  = <%= raw @serKZ %>
+</script>
+
 <%javascript_include_tag "graph"%>
+
 <h1>проба highcharts</h1>
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 <br><br>
+
 <%= link_to 'обратно', mstores_path %>
 
-<!--при повторном вызове нет отображения графика и потому так криво рефрешу по клику-->
-
+<!--при повторном вызове нет отображения графика и потому так криво рефрешу по клику:-->
 <script>
-    $('#container').click(function() {
+    $('#container1').click(function() {
         location.reload(false);             <!--false: reload from cash -->
     });
 </script>
-
-
 
 
 
