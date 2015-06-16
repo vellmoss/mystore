@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/graph',   to: 'static_pages#graph',   via: 'get'
   match '/chartkick', to: 'charts#show',        via: 'get'
+  match '/frama',    to:  'frama#show',          via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

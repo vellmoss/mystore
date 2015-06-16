@@ -6,6 +6,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
+//@import "fotorama";
 
 /* mixins, variables, etc. */
 
@@ -137,9 +138,10 @@ input {
   @include box_sizing;
 }
 
-/* мой цет for navbar bootstrap */
+/* мой цвет for navbar bootstrap */
 
 .navbar {
+    min-height: 40px;
   .navbar-inner {
     background-color: #340a51;
     background-image: none;
