@@ -1,27 +1,63 @@
+<%= javascript_include_tag 'mstores.js' %>
+<%#= javascript_include_tag 'jquery.js' %>
+<%#= javascript_include_tag 'jquery.dataTables.min.js' %>
+
+
 <h1>Ценник</h1>
 
-<table class="table  table-striped table-condensed table-hover"
-       align="center">  <!--table-bordered-->
-  <thead>
-    <tr class="mybg">
+<!--table class="table  table-striped table-condensed table-hover"
+       align="center"-->  <!--table-bordered-->
+<table id="example" class="display compact" cellspacing="0" width="100%">
+  <thead class="mybg">
+    <!--tr class="mybg"-->
+    <tr>
       <th>Товар</th>
       <th>Цена</th>
+      <th>Дата изменения</th>
       <th>Действия</th>
       <!--th colspan="3"></th-->
     </tr>
   </thead>
 
+  <tfoot>
+  <tr>
+    <th>Товар</th>
+    <th>Цена</th>
+    <th>Дата изменения</th>
+    <th>Действия</th>
+  </tr>
+  </tfoot>
+
   <tbody>
+<!--
     <% @mstores.each do |mstore| %>
       <tr>
         <td width="40%"><%= mstore.position %></td>
-        <td width="20%"><%= mstore.price %></td>
-        <td width="40%"><%= link_to 'Смотрим ', mstore %>
+        <td width="10%"><%= mstore.price %></td>
+        <td width="20%"><%= mstore.updated_at %></td>
+        <td width="30%"><%= link_to 'Смотрим ', mstore %>
             <%= link_to 'Изменяем ', edit_mstore_path(mstore) %>
             <%= link_to 'Удаляем ', mstore, method: :delete, data: { confirm: 'А надо ли?' } %>
         </td>
       </tr>
     <% end %>
+-->
+  <tr><td>мясо</td><td>12.34</td><td>2015-06-11 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>вино</td><td>24.12</td><td>2015-06-11 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>водка</td><td>32.10</td><td>2015-06-11 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>tanks</td><td>45.15</td><td>2015-06-10 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>fish</td><td>35.62</td><td>2015-06-10 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>money</td><td>52.11</td><td>2015-06-09 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>bananas</td><td>34.87</td><td>2015-06-09 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>skovoroda</td><td>45.98</td><td>2015-06-09 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>pivo</td><td>65.43</td><td>2015-06-08 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>mugik</td><td>44.98</td><td>2015-06-08 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>baba</td><td>66.14</td><td>2015-06-11 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>сыр</td><td>115.44</td><td>2015-06-14 08:33:16</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>мясоA</td><td>112.33</td><td>2015-06-20 15:04:42</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>виноB</td><td>224.45</td><td>2015-06-20 15:04:42</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>водкаC</td><td>332.32</td><td>2015-06-20 15:04:42</td><td>Смотрим Изменяем Удаляем</td></tr>
+  <tr><td>tanksD</td><td>445.11</td><td>2015-06-19 15:04:42</td><td>Смотрим Изменяем Удаляем</td></tr>
   </tbody>
 </table>
 

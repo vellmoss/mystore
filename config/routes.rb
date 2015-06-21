@@ -10,13 +10,15 @@ Rails.application.routes.draw do
   resources :mstores
 
   root  'mstores#index'
+
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/home',    to: 'static_pages#home',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/graph',   to: 'static_pages#graph',   via: 'get'
   match '/chartkick', to: 'charts#show',        via: 'get'
-  match '/frama',    to:  'frama#show',          via: 'get'
+  match '/frama',    to:  'frama#show',         via: 'get'
+#  match '/images',   to:  'mstores#show',       via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -6,9 +6,10 @@
           $serNY  = <%= raw @serNY %>
           $serIR  = <%= raw @serIR %>
           $serKZ  = <%= raw @serKZ %>
+        console.log("from html")
 </script>
 
-<%javascript_include_tag "graph"%>
+<%=javascript_include_tag "graph"%>
 
 <h1>проба highcharts</h1>
 <div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>

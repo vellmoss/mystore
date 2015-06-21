@@ -8,6 +8,7 @@
  */
 //  кстати эта библиотека называется highcharts.js, а graph.js я только один тип графиков отрисовываю.
 
+console.log("from js");
 $(function () {
     $('#container1').highcharts({
         title: {

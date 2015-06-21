@@ -1,0 +1,33 @@
+<!--
+<head>
+  <title>Basic fotorama</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=720">
+  &lt;!&ndash; jQuery, &ndash;&gt;
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+
+  <!--link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"--> <!-- 3 KB -->
+  <!--script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></--script--> <!-- 16 KB -->
+  <%= stylesheet_link_tag   'fotorama.css' %>
+  <%= javascript_include_tag 'fotorama.js' %>
+
+<!--/head-->
+
+<h1>Галерея</h1>
+
+<div id="fotorama" class="fotorama"  align="center"
+    data-nav="thumbs"
+    data-thumbheight="48">
+
+  <%= image_tag("1.jpg") %>
+  <%= image_tag("2.jpg") %>
+  <%= image_tag("3.jpg") %>
+  <%= image_tag("4.jpg") %>
+  <%= image_tag("5.jpg") %>
+  <%= image_tag("6.jpg") %>
+
+</div>
+<br><br>
+
+<%= link_to 'обратно', mstores_path %>

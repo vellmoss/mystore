@@ -1,7 +1,38 @@
 <% provide(:title, 'Help') %>
 <h1>Help my Store</h1>
+
+<%#javascript_include_tag "jquery.droplets"%>
+<!--script src="/assets/jquery.droplets.js"></script-->
+<!--
+
+<script>
+
+    $(document).ready(function() {
+        $("#boxy").droplets({
+            maxRadius: 50,
+            dropRate: 10,
+            dropSpreadTime: 2000
+        });
+    });
+</script>
+<style>
+    #boxy {
+        position:absolute;
+        bottom: 150px; /* Положение от нижнего края */
+        right: 150px; /* Положение от правого края */
+        height:100%;
+        width:100%;
+        overflow:hidden;
+        border:solid;
+        z-index:-1;
+    }
+</style>
+
+<div id="boxy"></div>
+
+-->
 <p>
-  ссылка вместо Help на мой сайт типа Twitter'a:
+    ссылка вместо Help на мой сайт типа Twitter'a:
   <a href="http://localhost:3000/users/">идем на юзеров</a>
   sample application.
   <%= link_to 'обратно', mstores_path %>

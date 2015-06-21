@@ -4,9 +4,10 @@
   <title><%=full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'jquery.js' %>
+  <%= javascript_include_tag 'jquery.dataTables.min.js' %>
   <script src="http://code.highcharts.com/highcharts.js"></script>
-
+  <%= csrf_meta_tags %>
 
   <!--script src='/assets/javascripts/bootstrap.min.js'></script-->
   <!--link  href='/assets/stylesheets/bootstrap.min.css' rel="stylesheet"/-->

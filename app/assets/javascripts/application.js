@@ -15,6 +15,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
-//= require_tree .
+//= not require_tree .
 
 /*= require fotorama*/
