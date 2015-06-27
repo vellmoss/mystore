@@ -6,7 +6,10 @@
     <file url="file://$PROJECT_DIR$/app/assets/javascripts/application.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/assets/javascripts/chartkick.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/assets/javascripts/graph.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/assets/javascripts/mstores.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap.min.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.dataTables.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/assets/stylesheets/static_pages.css.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/controllers/mstores_controller.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb" charset="UTF-8" />

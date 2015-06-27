@@ -1,14 +1,14 @@
 class MstoresController < ApplicationController
   before_action :set_mstore, only: [:show, :edit, :update, :destroy]
 
-  # respond_to  :json, :only => :index
-  respond_to :html, :xml, :json
+  respond_to  :json, :only => :index
+  # respond_to :html, :xml, :json
 
   # GET /mstores
   # GET /mstores.json
 
   def index
-    respond_with(@mstores = Mstore.all)
+    @mstores = Mstore.all
   end
 
   # GET /mstores/1

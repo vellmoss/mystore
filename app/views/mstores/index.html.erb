@@ -1,14 +1,14 @@
-<%= javascript_include_tag 'mstores.js' %>
 <%#= javascript_include_tag 'jquery.js' %>
 <%#= javascript_include_tag 'jquery.dataTables.min.js' %>
+<%= javascript_include_tag 'mstores.js' %>
 
 
 <h1>Ценник</h1>
 
 <!--table class="table  table-striped table-condensed table-hover"
        align="center"-->  <!--table-bordered-->
-<table id="example" class="display compact" cellspacing="0" width="100%">
-  <thead class="mybg">
+<table id="example" class="display compact cell-border" cellspacing="0" width="100%" >
+  <thead><!-- class="mybg"-->
     <!--tr class="mybg"-->
     <tr>
       <th>Товар</th>
@@ -19,6 +19,7 @@
     </tr>
   </thead>
 
+<!--
   <tfoot>
   <tr>
     <th>Товар</th>
@@ -27,21 +28,11 @@
     <th>Действия</th>
   </tr>
   </tfoot>
+-->
 
+<!--
   <tbody>
 <!--
-    <% @mstores.each do |mstore| %>
-      <tr>
-        <td width="40%"><%= mstore.position %></td>
-        <td width="10%"><%= mstore.price %></td>
-        <td width="20%"><%= mstore.updated_at %></td>
-        <td width="30%"><%= link_to 'Смотрим ', mstore %>
-            <%= link_to 'Изменяем ', edit_mstore_path(mstore) %>
-            <%= link_to 'Удаляем ', mstore, method: :delete, data: { confirm: 'А надо ли?' } %>
-        </td>
-      </tr>
-    <% end %>
--->
   <tr><td>мясо</td><td>12.34</td><td>2015-06-11 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
   <tr><td>вино</td><td>24.12</td><td>2015-06-11 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
   <tr><td>водка</td><td>32.10</td><td>2015-06-11 06:21:40</td><td>Смотрим Изменяем Удаляем</td></tr>
@@ -58,9 +49,26 @@
   <tr><td>виноB</td><td>224.45</td><td>2015-06-20 15:04:42</td><td>Смотрим Изменяем Удаляем</td></tr>
   <tr><td>водкаC</td><td>332.32</td><td>2015-06-20 15:04:42</td><td>Смотрим Изменяем Удаляем</td></tr>
   <tr><td>tanksD</td><td>445.11</td><td>2015-06-19 15:04:42</td><td>Смотрим Изменяем Удаляем</td></tr>
+
   </tbody>
+-->
 </table>
 
 <br>
 
 <%= link_to 'Новый товар', new_mstore_path %>
+
+<!--
+
+<%# @mstores.each do |mstore| %>
+    <tr>
+      <td width="40%"><%#= mstore.position %></td>
+      <td width="10%"><%#= mstore.price %></td>
+      <td width="20%"><%#= mstore.updated_at %></td>
+      <td width="30%"><#%= link_to 'Смотрим ', mstore %>
+        <%#= link_to 'Изменяем ', edit_mstore_path(mstore) %>
+        <%#= link_to 'Удаляем ', mstore, method: :delete, data: { confirm: 'А надо ли?' } %>
+      </td>
+    </tr>
+<%# end %>
+-->

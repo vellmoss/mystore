@@ -122,8 +122,9 @@ footer {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
+  //width: 100%;
   margin-bottom: 15px;
+  border-radius: 0.0px;       //for dataTable
   @include box_sizing;
 }
 
@@ -152,4 +153,25 @@ input {
   background-color: #58425a;
   color: #ffffff;
 }
+/* выравниваю метки в ряд с полями ввода в dataTable - не подейтвовало*/
 
+.dataTables_wrapper  label, input {
+  //float: none;
+  text-align: left;
+  font-weight: 500;
+  margin-left: 0.0em;
+  border-radius: 0.0px;
+
+}
+
+.dataTables_wrapper select {
+  width: 70px;
+  border: 1px solid #cccccc;
+  background-color: white;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  border-radius: 0.0px;
+}
+
+tfoot th { white-space: nowrap; }
