@@ -3,8 +3,8 @@
 <%= javascript_include_tag 'mstores.js' %>
 
 
-<h1>Ценник</h1>
-
+<%= DateTime.now.to_s %><h1>Ценник</h1>
+<hr>
 <!--table class="table  table-striped table-condensed table-hover"
        align="center"-->  <!--table-bordered-->
 <table id="example" class="display compact cell-border" cellspacing="0" width="100%" >
@@ -19,16 +19,12 @@
     </tr>
   </thead>
 
-<!--
   <tfoot>
   <tr>
-    <th>Товар</th>
-    <th>Цена</th>
-    <th>Дата изменения</th>
-    <th>Действия</th>
+    <th colspan="3" style="text-align:left">Итого:</th>
+    <th></th>
   </tr>
   </tfoot>
--->
 
 <!--
   <tbody>

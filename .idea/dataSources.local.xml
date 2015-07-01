@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="SQLite -" uuid="1c26f74b-b4f9-41e6-b7de-635d46a34b2a">
-      <secret-storage>master_key</secret-storage>
-    </data-source>
-    <data-source name="MySQL - mstore@localhost" uuid="6427e107-e959-457d-a88d-10a753716ffe">
-      <secret-storage>master_key</secret-storage>
+    <data-source name="SQLite -" uuid="1c26f74b-b4f9-41e6-b7de-635d46a34b2a" />
+    <data-source name="MySQL - mstore@localhost" uuid="6427e107-e959-457d-a88d-10a753716ffe" />
+    <data-source name="Rails mystore: development" uuid="2ffccb37-e991-4483-8ba0-54f1c3e6a54e">
       <user-name>root</user-name>
+      <user-password>dfc7dfc5dfd9dfd9df9bdf98</user-password>
       <schema-pattern>mstore.*</schema-pattern>
       <default-schemas>mstore.*</default-schemas>
     </data-source>

@@ -153,25 +153,89 @@ input {
   background-color: #58425a;
   color: #ffffff;
 }
-/* выравниваю метки в ряд с полями ввода в dataTable - не подейтвовало*/
 
-.dataTables_wrapper  label, input {
-  //float: none;
-  text-align: left;
-  font-weight: 500;
-  margin-left: 0.0em;
-  border-radius: 0.0px;
 
+tfoot th { white-space: nowrap; }
+
+.tulbar {             // это то, что я вставляю над шапкой табл. "example" между элементами len и search: выбор дат.
+  width: 600px;
+  height: 41px;
+  display: inline-block;
+  position: absolute;
+  margin-left: 30px;
+}
+.tulbar #dgroup{
+ // position: relative;
+  width: 290px;
+  height: 41px;
+  input {
+    left:5px;
+    Width: 120px;
+    margin-left: 1.0em;
+    margin-bottom: 4.0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    //  box-sizing: border-box;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+  }
+}
+.tulbar #rgroup{
+    width: 120px;
+    height: 39px;
+    margin-left: 330px;
+    border: 1px solid #cccccc;
+    transform: translate(0%,-100%);
 }
 
+.tulbar label {
+  width: 10px; height: 30px;
+  padding:0px;
+  margin-left: 15px;
+  margin-bottom: 0px;
+//  border: 1px solid;
+}
+::-webkit-inner-spin-button { display: none; }
+::-webkit-datetime-edit-fields-wrapper { height: 30px; }
+
+/* выравниваю метки в ряд с полями ввода в dataTable - не подейтвовало*/
+
+.dataTables_wrapper  label {  //input
+  text-align: left;
+  font-weight: 500;
+  border-radius: 0.0px;
+}
 .dataTables_wrapper select {
   width: 70px;
   border: 1px solid #cccccc;
   background-color: white;
 }
+.dataTables_length{
+  margin-top: 1.0em;
+  margin-bottom: 4.0px;
+  transform: translate(0%,-10px);
+}
 
 .dataTables_wrapper .dataTables_filter input {
   border-radius: 0.0px;
+  align-items: right;
+  transform: translate(0%,5px);
 }
 
-tfoot th { white-space: nowrap; }
+#example-filter {
+  //display: inline;
+  margin-top: 1.0em;
+  margin-bottom: 4.0px;
+}
+
+/*
+.selper {
+  //display: block;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+}*/

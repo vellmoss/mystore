@@ -38,7 +38,9 @@
     <file url="file://$PROJECT_DIR$/config/environments/development.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/initializers/assets.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/initializers/chartkick.rb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/initializers/date_formats.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/initializers/secret_token.rb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config/initializers/time_formats.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config/routes.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/db/migrate/20150603204700_create_mstores.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/db/migrate/20150610204931_create_visits.rb" charset="UTF-8" />
@@ -47,5 +49,6 @@
     <file url="file://$PROJECT_DIR$/test/fixtures/mstores.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test/models/mstore_test.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test/test_helper.rb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tmp/pids/server.pid" charset="UTF-8" />
   </component>
 </project>

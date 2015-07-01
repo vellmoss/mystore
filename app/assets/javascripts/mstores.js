@@ -32,20 +32,60 @@ $(document).ready(function() {
                 "sortAscending": ": активировать для сортировки столбца по возрастанию",
                 "sortDescending": ": активировать для сортировки столбца по убыванию"
             }
-        }
+        },
 
-/*
+        "dom": 'l<"tulbar">frtip',
+
         "initComplete": function () {       // поиск в табл. по клику на ячейке
             var api = this.api();
             api.$('td').click( function () {
                 api.search( this.innerHTML ).draw();
             } );
+        },
+
+        "footerCallback": function ( row, data, start, end, display ) {
+            var api = this.api();//, data;
+
+            // Remove the formatting to get integer data for summation
+            var intVal = function ( i ) {
+                return typeof i === 'string' ?
+                i.replace(/[\$,]/g, '')*1:
+                    typeof i === 'number' ?
+                        i : 0;
+            };
+
+            // Total over all pages
+            /*total = api
+                .column( 1 )
+                .data()
+                .reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                } );*/
+
+            data = api.column( 1 ).cache('search');
+            total = data.length ?
+                data.reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                } ) :
+                0;
+
+            // Total over this page
+            pageTotal = api
+                .column( 1, { page: 'current'} )
+                .data()
+                .reduce( function (a, b) {
+                    return intVal(a) + intVal(b);
+                }, 0 );
+
+            // Update footer
+            $( api.column( 3 ).footer() ).html(
+                '$'+pageTotal.toFixed(2) +' (Всего:  $'+ total.toFixed(2) +')'
+            );
         }
-*/
 
     } );
 
-
+    $("div.tulbar").html('<div id="dgroup"><input type="date" id="st" ><input type="date" id="fi" ></div><div id="rgroup"><label title="День"><input type="radio" name="per" value="day">d</label><label title="Неделя"><input type="radio" name="per" value="day">w</label><label title="Месяц"><input type="radio" name="per" value="day">m</label><label title="Все"><input type="radio" name="per" value="day" checked>A</label></div>');
 
 } );
 
