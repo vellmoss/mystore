@@ -6,8 +6,6 @@
     <data-source name="Rails mystore: development" uuid="2ffccb37-e991-4483-8ba0-54f1c3e6a54e">
       <user-name>root</user-name>
       <user-password>dfc7dfc5dfd9dfd9df9bdf98</user-password>
-      <schema-pattern>mstore.*</schema-pattern>
-      <default-schemas>mstore.*</default-schemas>
     </data-source>
   </component>
 </project>

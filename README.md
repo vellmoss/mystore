@@ -19,11 +19,14 @@
     plug-in API: "headerCallback": function(){...};
   - введение "авторизационной" зависмости на колонке "действия" - м.б. вовсе ее скрывать
   - элегантность таблицы (API: Scrolling and jQuery UI tabs)
+  - сохранение элементов календаря при обновлении страницы
+  - refresh данных таблицы через gem "gon"
   
   прочие нововведения:
   
-  - решение проблемы синхронизации time-zone приклада и БД
-     TimeZone.getDefault().getID() = Europe/Moscow — учитывая, что я в Москве, это правильно
-     TimeZone.getDefault().useDaylightTime() = true — что неправильно, но как я могу на это повлиять?
+  + решение проблемы синхронизации time-zone приклада и БД
+     application.rb: config.time_zone = 'Europe/Moscow'+ (в Mysql System подхватывается)+ config/initializers/date_formats.rb
+     это влияет на вывод при преобразовании {date,DateTime,Time} в to_s; при работе в терминале: t.strftime("%d.%m.%Y  %X")
+  - проверить на выборкке из БД по временнОму диапазону
   - голосовое управление меню
   - переход на "живые кнопки"

@@ -49,6 +49,5 @@
     <file url="file://$PROJECT_DIR$/test/fixtures/mstores.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test/models/mstore_test.rb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test/test_helper.rb" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tmp/pids/server.pid" charset="UTF-8" />
   </component>
 </project>

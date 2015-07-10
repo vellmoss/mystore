@@ -1,11 +1,52 @@
 
 // ................массив объектов как sourced data...................
 
+//var @d1 = $("#st").val();
+//var @d2 = $("#fi").val();
 
 $(document).ready(function() {
-    $('#example').dataTable( {
-        "ajax": 'mstores.json',
-        "columns": [
+    var dataSet;    // = {data:[]};
+    //$("#fi").value = Date();
+    //$("#st").value = $("#fi").val()-60;
+    var d1 = '2015-06-02';
+    var d2 = '2015-06-29';
+
+    $.fn.dataTable.ext.search.push(
+        function( settings, data, dataIndex ) {
+            var min = $('#st').val();
+            var max = $('#fi').val();
+            var d = data[2].substr(0,2);              // use data for the age column
+            var m = data[2].substr(3,2);              // use data for the age column
+            var y = data[2].substr(6,4);              // use data for the age column
+            var upt = y+'-'+m+'-'+d;
+            //console.log('min; max ='+min+';'+max);
+            if ( min <= upt  && upt <= max )
+            {
+               // console.log('true: upt='+upt);
+                return true;
+            }
+            //console.log('false: upt='+upt);
+            return false;
+        }
+    );
+
+    var table = $('#example').dataTable({
+        //"ajax": 'index.json'
+        "ajax": 'mstores.json?d1='+d1+'&d2='+d2
+        //"data":  dataSet.always(function(){dataSet.responseText})
+        //"ajax": dataSet.always(function(){dataSet.responseText})
+        //"ajax": function ("http://localhost:4000/mstores", {d1: d1, d2: d2},"JSON").done(function(){responseText})
+//        "ajax": {
+//                "par" : {d1:"2015-06-14",d2:"2015-06-29"},
+//                "url" :  "http://localhost:4000/mstores",
+//                "dataType": "JSON"
+//              function (par, callback, settings) {  //("http://localhost:4000/mstores", {d1: d1, d2: d2},"JSON").done(function(){responseText});
+//              callback(
+//                responseText  //JSON.parse( localStorage.getItem(dataSet) )
+//            );
+//        }
+
+        ,"columns": [
             { className: "dt-head-center","data": "position" },
             { className: "dt-head-center","data": "price"},
             { className: "dt-center","data": "updated_at" },
@@ -34,7 +75,7 @@ $(document).ready(function() {
             }
         },
 
-        "dom": 'l<"tulbar">frtip',
+        "dom": 'l<"tulbar">frtip',          // для календариков запроса к БД по датам сделал
 
         "initComplete": function () {       // поиск в табл. по клику на ячейке
             var api = this.api();
@@ -53,14 +94,6 @@ $(document).ready(function() {
                     typeof i === 'number' ?
                         i : 0;
             };
-
-            // Total over all pages
-            /*total = api
-                .column( 1 )
-                .data()
-                .reduce( function (a, b) {
-                    return intVal(a) + intVal(b);
-                } );*/
 
             data = api.column( 1 ).cache('search');
             total = data.length ?
@@ -81,45 +114,72 @@ $(document).ready(function() {
             $( api.column( 3 ).footer() ).html(
                 '$'+pageTotal.toFixed(2) +' (Всего:  $'+ total.toFixed(2) +')'
             );
+
         }
 
     } );
 
-    $("div.tulbar").html('<div id="dgroup"><input type="date" id="st" ><input type="date" id="fi" ></div><div id="rgroup"><label title="День"><input type="radio" name="per" value="day">d</label><label title="Неделя"><input type="radio" name="per" value="day">w</label><label title="Месяц"><input type="radio" name="per" value="day">m</label><label title="Все"><input type="radio" name="per" value="day" checked>A</label></div>');
+    table.show();
 
-} );
+    $("div.tulbar").html('<div id="dgroup"><input type="date" id="st" value='+d1+'><input type="date"  id="fi" value='+d2+'></div><div id="rgroup"><label title="День"><input type="radio" name="per" value="day">d</label><label title="Неделя"><input type="radio" name="per" value="day">w</label><label title="Месяц"><input type="radio" name="per" value="day">m</label><label title="Все"><input type="radio" name="per" value="day" checked>A</label></div>');
+    //<form action="/" method="get"><input type="submit"></form>  value="2015-06-01"  value="2015-06-30"
 
+    jQuery('#st,#fi').change(function() {
+        //console.log('st='+$('#st').val()+'  fi='+$("#fi").val());
+        table.fnDraw();
+    });
 /*
-var table = $('#example').DataTable( {
-    ajax: 'http://localhost:4000/mstores.json'
-} );
-//table.ajax.url( 'http://localhost:4000/mstores.json' ).load();
-alert( 'Data source: '+table.ajax.url() ); // Will show 'Data source: data.json'
+    jQuery('#fi').change(function() {
+
+        d1 = $("#st").val();
+        d2 = $("#fi").val();
+
+        if(d2 == "" || d2 == null){
+            d2 = '2015-06-30';
+            $("#fi").value = d2;
+        }
+        if(d1 == "" || d1 == null){
+            d1 = '2015-06-10';
+            $("#st").value = d1;
+        }
+        console.log("from date change: d1="+d1+"   d2="+d2);
+
+        dataSet = jQuery.getJSON("mstores.json", {d1: d1, d2: d2},"JSON")       //http://localhost:4000/
+            .done(function( data ) {                             // куда все это добро девать? mstore.json?
+                    console.log(data);                           //!!!!!! Object cache !!!!!!!
+                var api = this.api();
+                table.fnDraw();
+                //location.reload(true);                         // перегружает всю страницу, а надо только табл.
+            });
+
+        dataSet.always(function(){console.log(dataSet.responseText)});  //!!!!!!!!!Text!!!!!!!!
+    } );
 */
 
+    //console.log(dataSet);
 /*
- columns: [
- { "data": 'position' },
- { "data": 'price' },
- { "data": 'updated_at' },
- { "data": 'Действия' }      //чтобы реальные ссылки сделать: "fnRender": function (oObj)
- // {return '<a href=\"Details/' +
- //oObj.aData[0] + '\">View</a>';
- ]
+    if(dataSet.always(function(){dataSet.responseText}) != "{data:[]}") {
+ dataSet.always(function(){
+ table.clear;
+ table.rows.add(dataSet.responseText);
+ table.draw;
+ });
+// $.each(data, function (idx, obj) {
+//   table.row.add(data[idx]);
+// });
+
+*/
+    //table.ajax.reload( null, false );
+
+
+} );
+
+/*
  <%#= link_to 'Изменяем ', edit_mstore_path(mstore) %>
  <%#= link_to 'Удаляем ', mstore, method: :delete, data: { confirm: 'А надо ли?' } %>
   */
-/*
- "dataSrc": function ( json ) {
- for ( var i=0, ien=json.data.length ; i<ien ; i++ ) {
- //json.data[i][0] = json[i][0]+" "; json[i][1] = json[i][1]+ " "; json[i][2] = json[i][2]+" ";
- json.data[i][4] = '<a href=\"mstores/'+data[i][0]+'\">Изменить</a>'+'  Стереть';
- }
- return json.data;
- }
 
- */
-/*,     // выдает на консоль все строки данных со всем барахлом, инкапсулированным в экземплярах классов
+/*     // выдает на консоль все строки данных со всем барахлом, инкапсулированным в экземплярах классов
  "drawCallback": function( settings ) {
  var api = this.api();
 
@@ -127,13 +187,3 @@ alert( 'Data source: '+table.ajax.url() ); // Will show 'Data source: data.json'
  console.log( api.rows( {page:'current'} ).data() );
  }
  */
-/*
-,_: console.log( 'Column price sum: '+
-    this
-        .column( 1 )
-        .data()
-        .reduce( function (a,b) {
-            return a + b;
-        } )
-)
-*/

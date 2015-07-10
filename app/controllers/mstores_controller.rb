@@ -1,19 +1,37 @@
 class MstoresController < ApplicationController
-  before_action :set_mstore, only: [:show, :edit, :update, :destroy]
 
-  respond_to  :json, :only => :index
+  before_action :set_mstore, only: [:show, :edit, :update, :destroy]
+  skip_before_filter  :verify_authenticity_token
+
+    respond_to  :json, :only => :index
   # respond_to :html, :xml, :json
 
   # GET /mstores
   # GET /mstores.json
 
   def index
-    @mstores = Mstore.all
+    @d1 = params[:d1] #'2015-06-15'
+    @d2 = params[:d2] #'2015-07-01'    #d1 = '15-06-2015', d2 = '01-07-2015'    #.to_s(:db)   #'2015-06-15'..'2015-07-01'
+    if @d2 == "" or @d2 == nil or @d1 == "" or @d1 == nil or @d2 == "NaN" or @d1 == "NaN"
+      #@d1 = $("#st").val()
+      #@d2 = $("#fi").val()
+      @mstores = Mstore.last(33)
+    else
+      @mstores = Mstore.where(updated_at: (@d1..@d2))
+    end
+
+    logger.debug "d1 = #{params[:d1].inspect} attr_par @d1 = #{@d1}"
+    logger.debug "d2 = #{params[:d2].inspect} attr_par @d2 = #{@d2}"
+    logger.debug @mstores.inspect
+    #@mstores = Mstore.all
+
   end
 
   # GET /mstores/1
   # GET /mstores/1.json
   def show
+    # делаю что-то @mstores = ....
+    #render :action => "index"
   end
 
   # GET /mstores/new
@@ -77,4 +95,5 @@ class MstoresController < ApplicationController
     def mstore_params
       params.require(:mstore).permit(:position, :price)
     end
-end
+
+  end
